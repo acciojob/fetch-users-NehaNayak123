@@ -1,21 +1,8 @@
 
-import React, {useState} from "react";
+import React from "react";
 import './../styles/App.css';
-import 'regenerator-runtime/runtime'
-import axios from "axios";
 
-function App() {
-  const [userList, setUserList] = useState([]);
-  const [loading, setLoading] = useState(false);
-
-  const getUserList = () => {
-    setLoading(true);
-    axios.get("https://reqres.in/api/users").then((res) => {
-      setUserList(res.data.data);
-      setLoading(false);
-    });
-  };
-
+const App = () => {
   return (
     <div className="container App">
       <h4 className="d-inline-block">Blue Whales</h4>
@@ -61,4 +48,4 @@ function App() {
   );
 }
 
-export default App;
+export default App
